@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import Balance from './components/Balance';
+import History from './components/History';
 
 function App() {
+  const [balance, setBalance] = useState(0);
+  const [history, setHistory] = useState([]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Expence Tracker - Basic</h1>
+      <Balance
+        balance={balance}
+        setBalance={setBalance}
+        history={history}
+        setHistory={setHistory}
+      />
+      <History
+        history={history}
+      />
     </div>
   );
 }

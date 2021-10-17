@@ -1,0 +1,28 @@
+.overBalanceDiv{
+    display: inline-block;
+    width: 80%;
+    height: auto;
+    border: 1px solid #000;
+    margin: 0px auto 50px auto;
+    padding-bottom: 50px;
+    text-align: center;
+    align-items: center;
+}
+.balanceBtnDiv{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+button{
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+}
+.error{
+    color: red;
+    font-size: 12px;
+    margin: 5px 0px 0px 0px;
+}
