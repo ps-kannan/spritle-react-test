@@ -29,6 +29,14 @@ test('initial Transaction test', () => {
   const { nodata } = setup();
   expect(nodata).toHaveTextContent('No Transactions')
 });
+
+test('Input value Error Test',()=>{
+  const { input,error } = setup();
+  fireEvent.change(input, {target: {value: 'asda'}})
+  expect(input.value).toBe('')
+  expect(error).toHaveTextContent('Please Enter Number Only');
+});
+
 test('Add Amount Error Test',()=>{
   const { input,addBtn,error } = setup();
   fireEvent.change(input, {target: {value: ''}})

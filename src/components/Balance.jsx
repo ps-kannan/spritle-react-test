@@ -48,6 +48,9 @@ const Balance = ({balance,setBalance,history,setHistory}) =>{
     const AmountValidate = () =>{
         let reg = new RegExp(/[\D]/gm);
         let eleValue = eleAmount.current.value;
+        if(reg.test(eleValue)){
+            setError('Please Enter Number Only');
+        }
         eleAmount.current.value = eleValue.replace(reg,'');
     };
     return(
